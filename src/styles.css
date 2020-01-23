@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0; padding: 0;
+
+}
+
+.parallax1
+{
+    background-image: url("https://images8.alphacoders.com/837/837194.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2
+{
+    background-image: url("https://images2.alphacoders.com/857/85720.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax3
+{
+    background-image: url("https://images7.alphacoders.com/294/294450.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

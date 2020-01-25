@@ -1,0 +1,33 @@
+*
+{
+    margin: 0; padding: 0;
+
+}
+
+.parallax2
+{
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/03/21/642419/bf43c440815c89b1e1721bbc15c87922-700.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax1
+{
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2017/06/20/1092639/75e79a54b546c4daa0e38c87f1b34369-700.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax3
+{
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/04/19/666409/897e3532483da88324d7bec677c1f129-700.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

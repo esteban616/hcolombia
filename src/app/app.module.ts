@@ -11,6 +11,9 @@ import { NgxParallaxModule } from '@yoozly/ngx-parallax';
 import { HeroComponent } from './public/master-page/hero/hero.component';
 import { PageNotFoundComponent } from './public/master-page/page-not-found/page-not-found.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,7 @@ import { PageNotFoundComponent } from './public/master-page/page-not-found/page-
     ParalaxDirective,
     HeroComponent,
     PageNotFoundComponent
+
   ],
   imports: [
     BrowserModule,

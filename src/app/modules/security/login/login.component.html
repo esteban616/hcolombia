@@ -1,29 +1,75 @@
-   <div class="parallax1">
-<div class="container">
-      <div class="row">
+<div class="parallax1">
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-6 card-panel">
 
-          <div class="col s6 offset-s3 z-depth-1" id="panell">
-            <h5 id="title">Ingrese sus datos</h5>
-            <form>
+            <form [formGroup]="fgValidation" (ngSubmit)="loginEvent()" class="login-form">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input class="validate" formControlName="username" id="username" type="email">
+                        <label for="username" data-error="wrong" data-success="right">Username</label>
+                        <div class="warning-validation" *ngIf="fg.username.errors && (fg.username.dirty || fg.username.touched)">
+                            <strong *ngIf="fg.username.errors.required">
+                            Username is required!<br />
+                        </strong>
+                            <strong *ngIf="fg.username.errors.minlength">
+                            Username must be at least 5 characters long!<br />
+                        </strong>
+                            <strong *ngIf="fg.username.errors.maxlength">
+                            Username must be up to 40 characters long!<br />
+                        </strong>
+                            <strong *ngIf="fg.username.errors.email">
+                            Username must be an email!
+                        </strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="password" formControlName="password" type="password">
+                        <label for="password">Password</label>
+                        <div class="warning-validation" *ngIf="fg.password.errors && (fg.password.dirty || fg.password.touched)">
+                            <strong *ngIf="fg.password.errors.required">
+                            Password is required!<br />
+                        </strong>
+                            <strong *ngIf="fg.password.errors.minlength">
+                            Password must be at least 10 characters long!<br />
+                        </strong>
+                            <strong *ngIf="fg.password.errors.maxlength">
+                            Password must be up to 15 characters long!
+                        </strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button [disabled]="fg.username.errors && fg.password.errors" class="btn waves-effect waves-light blue col s12" type="submit">Login
+                    </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        <p class="margin right-align medium-small"><a href="#">Forgot password?</a></p>
+                    </div>
+                </div>
+                <!--                <div class="row ">
+                    <re-captcha (resolved)="resolved($event) " siteKey="6LfxWtYUAAAAAL7fiWxNtKkjTP01mJlD84IBoSz2 ">
 
-            <div class="input-field" id="username">
-              <input  type="text" class="validate">
-              <label for="username">Username</label>
-          </div>
-          <div class="input-field" id="password">
-            <input  type="password" class="validate">
-            <label for="password">Password</label>
+
+                        <button class="btn waves-effect waves-light col s12 " type="submit ">Login
+                       </button>
+
+                    </re-captcha>
+                    </div>
+-->
+
+
+
+            </form>
+
         </div>
-        <p>
-            <input type="checkbox" id="remember"/>
-            <label for="remember" id="checkbox" >Remember me</label>
-        </p>
-        <a class="waves-effect waves-light btn" id="loginbtn">Login</a>
-        
-        </form>
-
-        </div>
-      </div>
-
     </div>
- </div>
+</div>

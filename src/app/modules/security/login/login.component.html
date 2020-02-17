@@ -46,7 +46,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <button [disabled]="fg.username.errors && fg.password.errors" class="btn waves-effect waves-light blue col s12" type="submit">Login
+                        <button *ngIf="recaptcha.length > 0" [disabled]="fg.username.errors && fg.password.errors" class="btn waves-effect waves-light blue col s12" type="submit">Login
                     </button>
                     </div>
                 </div>
@@ -55,16 +55,10 @@
                         <p class="margin right-align medium-small"><a href="#">Forgot password?</a></p>
                     </div>
                 </div>
-                <!--                <div class="row ">
+                <div class="row ">
                     <re-captcha (resolved)="resolved($event) " siteKey="6LfxWtYUAAAAAL7fiWxNtKkjTP01mJlD84IBoSz2 ">
-
-
-                        <button class="btn waves-effect waves-light col s12 " type="submit ">Login
-                       </button>
-
                     </re-captcha>
-                    </div>
--->
+                </div>
 
 
 

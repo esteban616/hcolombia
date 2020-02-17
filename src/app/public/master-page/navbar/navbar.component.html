@@ -1,17 +1,18 @@
-  <nav>
-    <div class="nav-wrapper black" id="navbar" >
-      <a routerLink="/home" class="brand-logo">Hcolombia</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a routerLink="/security/login">Login</a></li>
-        <li><a routerLink="/security/logout">Logout</a></li>
-        
-      </ul>
-    </div>
-  </nav>
+<nav>
+    <strong *ngIf="userLogged">{{userName}}</strong>
+    <div class="nav-wrapper black" id="navbar">
+        <a routerLink="/home" class="brand-logo">Hcolombia</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li *ngIf="!userLogged"><a routerLink="/security/login">Login</a></li>
+            <li *ngIf="userLogged"><a routerLink="/security/logout">Logout</a></li>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a routerLink="/security/login">Login</a></li>
-        <li><a routerLink="/security/logout">Logout</a></li>
-   
-  </ul>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li *ngIf="!userLogged"><a routerLink="/security/login">Login</a></li>
+    <li *ngIf="userLogged"><a routerLink="/security/logout">Logout</a></li>
+
+</ul>
